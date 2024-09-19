@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGuard Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">EcoGuard</div>
+            <ul class="nav-links">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- User Dashboard Section -->
+    <main class="dashboard">
+        <!-- Header with Location -->
+        <section class="dashboard-header">
+            <h1>Welcome, <span id="username">John Doe</span></h1>
+            <h2>Current Location: <span id="location">New York, NY</span></h2>
+        </section>
+
+        <!-- Air Quality Index (AQI) -->
+        <section class="aqi-section">
+            <div class="aqi-card">
+                <h3>Air Quality Index (AQI)</h3>
+                <div class="aqi-value good">
+                    <span>75</span>
+                </div>
+                <p>Good</p>
+            </div>
+            <div class="current-observation">
+                <h3>Current Observation</h3>
+                <div class="observation-cards">
+                    <div class="obs-card">
+                        <i class="fas fa-smog"></i>
+                        <h4>PM2.5</h4>
+                        <p>12 µg/m³</p>
+                    </div>
+                    <div class="obs-card">
+                        <i class="fas fa-wind"></i>
+                        <h4>Wind</h4>
+                        <p>5 km/h</p>
+                    </div>
+                    <div class="obs-card">
+                        <i class="fas fa-thermometer-half"></i>
+                        <h4>Temperature</h4>
+                        <p>22°C</p>
+                    </div>
+                    <div class="obs-card">
+                        <i class="fas fa-tint"></i>
+                        <h4>Humidity</h4>
+                        <p>60%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Map Button -->
+        <section class="interactive-map">
+            <button class="btn primary" id="view-map">View Interactive Map</button>
+        </section>
+
+        <!-- Weather Forecast with AQI Prediction -->
+        <section class="weather-forecast">
+            <h3>7-Day Weather Forecast & AQI Prediction</h3>
+            <div class="forecast-cards">
+                <!-- Example Forecast Card -->
+                <div class="forecast-card">
+                    <h4>Monday</h4>
+                    <i class="fas fa-sun"></i>
+                    <p>Temp: 25°C</p>
+                    <p>AQI: 80 <span class="aqi good">Good</span></p>
+                </div>
+                <div class="forecast-card">
+                    <h4>Tuesday</h4>
+                    <i class="fas fa-cloud"></i>
+                    <p>Temp: 22°C</p>
+                    <p>AQI: 110 <span class="aqi moderate">Moderate</span></p>
+                </div>
+                <!-- Add more forecast cards as needed -->
+            </div>
+        </section>
+
+        <!-- Custom Alerts Section -->
+        <section class="custom-alerts">
+            <h3>Manage Alerts</h3>
+            <div class="alerts-panel">
+                <form>
+                    <label for="alert-location">Location:</label>
+                    <input type="text" id="alert-location" name="alert-location" placeholder="Enter location" required>
+
+                    <label for="aqi-threshold">AQI Threshold:</label>
+                    <input type="number" id="aqi-threshold" name="aqi-threshold" min="0" max="500" required>
+
+                    <label for="alert-method">Alert Method:</label>
+                    <select id="alert-method" name="alert-method">
+                        <option value="email">Email</option>
+                        <option value="sms">SMS</option>
+                    </select>
+
+                    <button type="submit" class="btn primary">Set Alert</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Health Recommendations Sidebar -->
+        <aside class="health-recommendations">
+            <h3>Health Recommendations</h3>
+            <p>Current AQI is Good. It's a great day to be outdoors!</p>
+            <!-- Add more tailored advice based on AQI -->
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EcoGuard. All rights reserved.</p>
+    </footer>
+
+    <!-- Optional JavaScript for Interactivity -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

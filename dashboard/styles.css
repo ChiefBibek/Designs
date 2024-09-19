@@ -1,0 +1,401 @@
+/* styles.css */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #FEFEFE;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Navigation Bar */
+header {
+    background: #85C124;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    color: #FEFEFE;
+    font-weight: 700;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar ul li a {
+    color: #FEFEFE;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #F7D300;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    padding: 40px 50px;
+    background-color: #FEFEFE;
+    text-align: center;
+    border-bottom: 2px solid #F7D300;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.dashboard-header h2 {
+    font-size: 1.5rem;
+    color: #85C124;
+}
+
+/* AQI Section */
+.aqi-section {
+    padding: 40px 50px;
+    background-color: #71bce1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.aqi-card {
+    flex: 1 1 200px;
+    background-color: #F7D300;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.aqi-card h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.aqi-value {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.aqi-value.good {
+    color: #85C124;
+}
+
+.aqi-value.moderate {
+    color: #D3ED00;
+}
+
+.aqi-section p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Current Observation */
+.current-observation {
+    flex: 2 1 600px;
+}
+
+.current-observation h3 {
+    margin-bottom: 20px;
+    color: #85C124;
+    text-align: center;
+}
+
+.observation-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.obs-card {
+    background-color: #FEFEFE;
+    border: 2px solid #85C124;
+    border-radius: 10px;
+    padding: 15px 20px;
+    text-align: center;
+    width: 120px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.obs-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.obs-card i {
+    font-size: 2rem;
+    color: #85C124;
+    margin-bottom: 10px;
+}
+
+.obs-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.obs-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Interactive Map Button */
+.interactive-map {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.btn.primary {
+    background-color: #F7D300;
+    color: #333;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn.primary:hover {
+    background-color: #D2C42C;
+    transform: scale(1.05);
+}
+
+/* Weather Forecast */
+.weather-forecast {
+    padding: 40px 50px;
+    background-color: #FEFEFE;
+    text-align: center;
+}
+
+.weather-forecast h3 {
+    margin-bottom: 30px;
+    color: #85C124;
+}
+
+.forecast-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.forecast-card {
+    background-color: #F7D300;
+    border-radius: 15px;
+    padding: 20px;
+    width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-card h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.forecast-card i {
+    font-size: 2rem;
+    color: #85C124;
+    margin-bottom: 10px;
+}
+
+.forecast-card p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.aqi.good {
+    color: #85C124;
+}
+
+.aqi.moderate {
+    color: #D2C42C;
+}
+
+/* Custom Alerts Section */
+.custom-alerts {
+    padding: 40px 50px;
+    background-color: #FEFEFE;
+    text-align: center;
+}
+
+.custom-alerts h3 {
+    margin-bottom: 20px;
+    color: #85C124;
+}
+
+.alerts-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alerts-panel form {
+    background-color: #F7D300;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.alerts-panel form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.alerts-panel form input,
+.alerts-panel form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #85C124;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.alerts-panel form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #85C124;
+    color: #FEFEFE;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.alerts-panel form button:hover {
+    background-color: #6AA317;
+    transform: scale(1.02);
+}
+
+/* Health Recommendations Sidebar */
+.health-recommendations {
+    padding: 40px 50px;
+    background-color: #D3ED00;
+    color: #333;
+    border-radius: 15px;
+    margin: 40px 50px;
+    text-align: left;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.health-recommendations h3 {
+    margin-bottom: 15px;
+    color: #85C124;
+}
+
+.health-recommendations p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #FEFEFE;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .feature-cards, .forecast-cards, .observation-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .alerts-panel form {
+        width: 90%;
+    }
+
+    .health-recommendations {
+        margin: 20px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-header h1 {
+        font-size: 2rem;
+    }
+
+    .dashboard-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .aqi-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aqi-card, .current-observation {
+        width: 100%;
+    }
+
+    .forecast-card {
+        width: 100%;
+    }
+
+    .health-recommendations {
+        text-align: center;
+    }
+}
