@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map & Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-logo">AirMonitor</div>
+        <input type="text" id="location-search" placeholder="Search by city or region...">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Map</a>
+            <a href="#">Analytics</a>
+            <a href="#">Profile</a>
+            <a href="#">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Interactive Map Section -->
+    <section id="map-section">
+        <div id="map-container">
+            <!-- Placeholder for the interactive map -->
+            <div id="map">Map Loading...</div>
+
+            <!-- Data Layer Toggles -->
+            <div class="map-controls">
+                <button class="layer-btn" onclick="toggleLayer('aqi')">AQI</button>
+                <button class="layer-btn" onclick="toggleLayer('pm25')">PM2.5</button>
+                <button class="layer-btn" onclick="toggleLayer('o3')">Ozone</button>
+                <button class="layer-btn" onclick="toggleLayer('historical')">Historical</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Visualization Section -->
+    <section id="analytics-section">
+        <div class="section-header">
+            <h2>Data Visualization & Analytics</h2>
+            <p>Analyze trends and compare air quality across regions.</p>
+        </div>
+
+        <!-- Chart Container -->
+        <div class="chart-container">
+            <canvas id="airQualityChart"></canvas>
+        </div>
+
+        <!-- Comparison Section -->
+        <div class="comparison-section">
+            <h3>Compare Air Quality</h3>
+            <div class="comparison-cities">
+                <input type="text" placeholder="City 1" id="city1">
+                <input type="text" placeholder="City 2" id="city2">
+                <button id="compare-btn">Compare</button>
+            </div>
+        </div>
+
+        <!-- Download Report -->
+        <button id="download-report">Download Report</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
